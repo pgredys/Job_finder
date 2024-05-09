@@ -1,6 +1,6 @@
 websites:
-  - pl.indeed:
-      name: 'Indeed PL'
-      base_url: 'https://pl.indeed.com/'
-      template_url: 'https://pl.indeed.com/jobs?q={jobs}&l={location}'
-      comment: 'for test purpose'
+  pl.indeed:
+    name: Indeed PL
+    base_url: https://pl.indeed.com/
+    template_url: https://pl.indeed.com/jobs?q={jobs}&l={location}
+    comment: for test purpose
