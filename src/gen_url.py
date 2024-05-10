@@ -14,8 +14,8 @@ class WebsiteUrl:
         self.url_gen = self.next_url()
 
     def gen_url(self, name: str, args: dict[str, str | list[str]]) -> str:
-        if type(params['jobs']) is list:
-            params['jobs'] = '+'.join(params['jobs'])
+        if type(args['jobs']) is list:
+            args['jobs'] = '+'.join(args['jobs'])
 
         return self.websites[name]['template_url'].format(**args)
 
