@@ -1,2 +1,3 @@
-# Job_finder
-Scraper and analyzer of data programme to find job requirements
+# scraper from job offers websites 
+Scraper and analyzer of data program to find job requirements
+
