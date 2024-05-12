@@ -1,5 +1,7 @@
 import yaml
 
+from web_extractor import extract_data, web_extractor
+
 
 class WebsiteUrl:
     def __init__(self):
@@ -24,6 +26,12 @@ class WebsiteUrl:
         for website in list(self.websites):
             yield website
 
+    def parse_data(self, name, source):
+        data = {}
+        for item in self.websites[name]['parse']:
+            data[item] = extract_data(source, *self.websites[name]['parse'][item])
+        return data
+
 
 if __name__ == '__main__':
     websites = WebsiteUrl()
@@ -31,6 +39,7 @@ if __name__ == '__main__':
     url = websites.gen_url('pl.indeed', params)
     print(url, '\n')
 
-    for tmp in websites.url_gen:
-        print(tmp)
+    soup = web_extractor(url)
 
+    collected_data = websites.parse_data('pl.indeed', soup)
+    print(collected_data, '\n')
