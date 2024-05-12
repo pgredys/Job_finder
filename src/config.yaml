@@ -17,3 +17,7 @@ websites:
         - div
         - attrs
         - {'data-testid': 'text-location'}
+      link:
+        - a
+        - class_link
+        - jcs-JobTitle
