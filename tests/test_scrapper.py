@@ -44,9 +44,6 @@ def job_data(soup):
 
 
 def company_data(soup):
-    # find the Html tag
-    # with find()
-    # and convert into stringdata-testid="company-name"
     company_data = []
     for item in soup.find_all('span', attrs={'data-testid': 'company-name'}):
         company_data.append(item.get_text())

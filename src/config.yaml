@@ -4,3 +4,16 @@ websites:
     base_url: https://pl.indeed.com/
     template_url: https://pl.indeed.com/jobs?q={jobs}&l={location}
     comment: for test purpose
+    parse:
+      job:
+        - h2
+        - class_
+        - jobTitle
+      company name:
+        - span
+        - attrs
+        - {'data-testid': 'company-name'}
+      company address:
+        - div
+        - attrs
+        - {'data-testid': 'text-location'}
