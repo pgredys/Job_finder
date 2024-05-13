@@ -21,3 +21,25 @@ websites:
         - a
         - class_link
         - jcs-JobTitle
+  uk.indeed:
+    name: Indeed uk
+    base_url: https://uk.indeed.com/
+    template_url: https://uk.indeed.com/jobs?q={jobs}
+    comment: for test purpose
+    parse:
+      job:
+        - h2
+        - class_
+        - jobTitle
+      company name:
+        - span
+        - attrs
+        - { 'data-testid': 'company-name' }
+      company address:
+        - div
+        - attrs
+        - { 'data-testid': 'text-location' }
+      link:
+        - a
+        - class_link
+        - jcs-JobTitle
